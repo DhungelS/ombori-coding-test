@@ -6,17 +6,16 @@ import React, { Component } from 'react';
 class Main extends Component {
 
     constructor(props){
-        super(props){
+        super(props)
             this.state = {
-                mainComponent: <UserList/>
-            }
+                Component: <Load/>
+            
         }
     }
 
     componentDidMount(){
         this.timeoutHandle = setTimeout(()=>{
-            // Add your logic for the transition
-            this.setState({ component: <Load /> })
+            this.setState({ Component: <UserList/> })
        }, 3000);
     }
 
@@ -26,7 +25,9 @@ class Main extends Component {
 
     render() {
         return (
-           this.state.mainComponent
+           this.state.Component
     );
     }
 }
+
+export default Main;

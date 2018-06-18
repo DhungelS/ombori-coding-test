@@ -9,7 +9,7 @@ import {
 
 const UserItem = props => {
   return (
-    <TouchableOpacity onPress={props.onItemPressed} >
+    <TouchableOpacity>
       <View style={styles.userItem}>
         <Image
           resizeMode="cover"
@@ -38,4 +38,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default uSERItem;
+export default UserItem;

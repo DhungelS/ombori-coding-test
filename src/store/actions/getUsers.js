@@ -7,6 +7,10 @@ export const fetchUsers = () => dispatch => {
     dispatch({type: FETCH_USER_REQUEST})
     axios
     .get(BASE_URL)
-    .then(res => dispatch({ type: FETCH_USER_SUCCESS, payload: res.data }))
+    .then(res => {
+        console.log(res.data.data)
+        dispatch({ type: FETCH_USER_SUCCESS, payload: res.data.data })
+
+})
     .catch(err => dispatch({ type: FETCH_USER_ERROR, payload: err }));
 }

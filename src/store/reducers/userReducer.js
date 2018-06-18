@@ -15,12 +15,12 @@ const initialState = {
       case 'FETCH_USER_SUCCESS':
         return {
           ...state,
-          usersData: [...]
+          usersData: [...state.usersData, action.payload]
         }
         case'FETCH_USER_ERROR':
         return {
           ...state,
-          usersData: [...state.usersData, action.payload]
+          err:action.payload
         }
       default:
         return state;
