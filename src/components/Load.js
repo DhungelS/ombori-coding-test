@@ -30,6 +30,7 @@ class Load extends Component {
         ).start(() => this.spin())
     }
 
+    //Invoke the method when the component mounts
     componentDidMount () {
         this.spin()
       }
