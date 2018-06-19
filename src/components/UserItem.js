@@ -3,12 +3,13 @@ import {
   View,
   Text,
   StyleSheet,
-  TouchableOpacity,
-  Image
+  Image,
+  TouchableOpacity
 } from 'react-native';
 
 const UserItem = props => {
   return (
+    <View>
     <TouchableOpacity>
       <View style={styles.userItem}>
         <Image
@@ -16,9 +17,10 @@ const UserItem = props => {
           source={props.userImage}
           style={styles.userImage}
         />
-        <Text>{props.userTitle}</Text>
+        <Text style={{fontSize: 25}}>{props.userTitle}</Text>
       </View>
     </TouchableOpacity>
+    </View>
   );
 };
 
@@ -29,12 +31,14 @@ const styles = StyleSheet.create({
     padding: 10,
     backgroundColor: '#eee',
     flexDirection: 'row',
-    alignItems: 'center'
+    alignItems: 'center',
+    alignSelf: 'stretch',
   },
   userImage: {
     marginRight: 8,
-    height: 30,
-    width: 30
+    height: 90,
+    width: 90,
+    borderRadius: 5
   }
 });
 
