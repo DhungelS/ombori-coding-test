@@ -6,6 +6,7 @@ import {
     View,
     StyleSheet,
     FlatList,
+    Text
 } from 'react-native';
 import UserItem from './UserItem';
 import Axios from 'axios';
@@ -18,7 +19,8 @@ class UserList extends Component {
         this.state = {
             usersData: [],
             currentPage: 1,
-            pages: null
+            pages: null,
+            endMessage: null
         }
     }
 
@@ -44,7 +46,7 @@ class UserList extends Component {
     }
 
     render() {
-    
+        
         return (
             <View>
                 <FlatList
@@ -59,6 +61,7 @@ class UserList extends Component {
                             userImage={{ uri: info.item.avatar }}
                         />
                     )}
+
                 />
             </View>
         )
